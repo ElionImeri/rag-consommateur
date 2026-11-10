@@ -1,1 +1,5 @@
 .venv/
+data/raw/
+data/tmp/
+.ruff_cache/
+.DS_Store
