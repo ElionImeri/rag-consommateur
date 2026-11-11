@@ -3,18 +3,18 @@ from pathlib import Path
 import json
 from bs4 import BeautifulSoup
 
-EPUB_DIR = Path("data/tmp/epub_fr/OPF")
 ARTICLE_ID = re.compile(r"^se:[^-]+$")
 
 
 def clean_text(text):
     # Removes stray spaces left by get_text().
     text = re.sub(r"\s+(?=[.)])", "", text)
-    text = re.sub("\s+", " ", text)
+    text = re.sub(r"\s+", " ", text)
+    text = re.sub(r"(?<=\()\s+", "", text)
     return text
 
 
-def parse_file(path):
+def parse_file(path, lang):
     soup = BeautifulSoup(path.read_text(encoding="utf-8"), "html.parser")
 
     # print(len(soup.find_all("Hidden"))) would have given 0 because Hidden is not an element like <span></span> or <head></head>
@@ -35,9 +35,9 @@ def parse_file(path):
         number = div["id"].removeprefix("se:").replace("_", ".")
         articles.append(
             {
-                "id": f"fr-{number}",
+                "id": f"{lang}-{number}",
                 "article": number,
-                "lang": "fr",
+                "lang": lang,
                 "text": text,
             }
         )
@@ -45,26 +45,34 @@ def parse_file(path):
 
 
 if __name__ == "__main__":
-    files = sorted(
-        EPUB_DIR.glob("page*.xhtml"),
-        key=lambda f: int(re.search(r"\d+", f.stem).group()),
-    )
+    numbers = {}
+    for lang in ["fr", "en"]:
+        epub_dir = Path(f"data/tmp/epub_{lang}/OPF")
+        out_path = Path(f"data/processed/articles_{lang}.jsonl")
+        files = sorted(
+            epub_dir.glob("page*.xhtml"),
+            key=lambda f: int(re.search(r"\d+", f.stem).group()),
+        )
 
-    all_articles = []
-    for f in files:
-        all_articles.extend(parse_file(f))
+        all_articles = []
+        for f in files:
+            all_articles.extend(parse_file(f, lang))
 
-    print("Number of articles: ", len(all_articles))
-    print("First: ", all_articles[0]["article"])
-    print("Last: ", all_articles[-1]["article"])
-    print("Unique IDs :", len({a["id"] for a in all_articles}))
+        numbers[lang] = {a["article"] for a in all_articles}
 
-    out_path = Path("data/processed/articles_fr.jsonl")
-    out_path.parent.mkdir(parents=True, exist_ok=True)
+        print("Number of articles: ", len(all_articles))
+        print("First: ", all_articles[0]["article"])
+        print("Last: ", all_articles[-1]["article"])
+        print("Unique IDs :", len({a["id"] for a in all_articles}))
 
-    with open(out_path, "w", encoding="utf-8") as fh:
-        for article in all_articles:
-            line = json.dumps(article, ensure_ascii=False)
-            fh.write(line + "\n")
+        out_path.parent.mkdir(parents=True, exist_ok=True)
 
-    print("Saved in", out_path)
+        with open(out_path, "w", encoding="utf-8") as fh:
+            for article in all_articles:
+                line = json.dumps(article, ensure_ascii=False)
+                fh.write(line + "\n")
+
+        print("Saved in", out_path)
+
+    print("Absent in english:", numbers["fr"] - numbers["en"])
+    print("Absent in french:", numbers["en"] - numbers["fr"])
