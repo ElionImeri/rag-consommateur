@@ -8,7 +8,7 @@ ARTICLE_ID = re.compile(r"^se:[^-]+$")
 
 def clean_text(text):
     # Removes stray spaces left by get_text().
-    text = re.sub(r"\s+(?=[.)])", "", text)
+    text = re.sub(r"\s+(?=[.)°text])", "", text)
     text = re.sub(r"\s+", " ", text)
     text = re.sub(r"(?<=\()\s+", "", text)
     return text
