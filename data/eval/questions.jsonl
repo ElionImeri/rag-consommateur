@@ -1,3 +1,50 @@
-{"id": "q001", "lang": "fr", "question": "Combien de jours ai-je pour annuler un contrat avec un vendeur qui est venu chez moi ?", "articles": ["59"]}
-{"id": "q001-en", "lang": "en", "question": "How many days do I have to cancel a contract with a salesperson who came to my home?", "articles": ["59"]}
-{"id": "q002", "lang": "fr", "question": "Mon frigo a lâché après deux ans, le magasin peut-il refuser de le réparer ?", "articles": ["37", "38"]}
+{"id": "q001", "lang": "fr", "question": "Est-ce qu'un magasin peut refuser de me rembourser?", "articles": []}
+{"id": "q002", "lang": "fr", "question": "J'ai acheté quelque chose et j'ai changé d'idée. Est-ce que je peux le retourner?", "articles": []}
+{"id": "q003", "lang": "fr", "question": "Un magasin peut-il m'obliger à accepter un crédit au lieu de me rembourser?", "articles": []}
+{"id": "q004", "lang": "fr", "question": "Combien de jours ai-je pour retourner un achat?", "articles": []}
+{"id": "q005", "lang": "fr", "question": "Est-ce qu'un magasin peut refuser un retour même si j'ai encore mon reçu?", "articles": []}
+{"id": "q006", "lang": "fr", "question": "J'ai acheté un produit en spécial et il ne fonctionne pas. Est-ce que je peux me faire rembourser?", "articles": ["37", "38", "54"]}
+{"id": "q007", "lang": "fr", "question": "Un magasin peut-il refuser de reprendre un article encore dans son emballage?", "articles": []}
+{"id": "q008", "lang": "fr", "question": "Est-ce légal de vendre un produit avec la mention « vente finale »?", "articles": ["37", "38", "261", "262"]}
+{"id": "q009", "lang": "fr", "question": "J'ai acheté un cadeau qui ne convient pas. Est-ce que je peux le retourner?", "articles": []}
+{"id": "q010", "lang": "fr", "question": "Le commerçant refuse de me rembourser. Quels sont mes recours?", "articles": ["272"]}
+{"id": "q011", "lang": "fr", "question": "Mon nouvel appareil est déjà brisé. Est-ce que le magasin doit me le remplacer?", "articles": ["37", "38", "38.1", "54"]}
+{"id": "q012", "lang": "fr", "question": "Mon téléphone ne fonctionne plus après quelques mois. Qu'est-ce que je peux faire?", "articles": ["37", "38", "38.1", "54"]}
+{"id": "q013", "lang": "fr", "question": "Est-ce qu'un magasin peut me dire que la garantie est seulement de 30 jours?", "articles": ["38", "227", "261", "262"]}
+{"id": "q014", "lang": "fr", "question": "J'ai acheté un produit qui a arrêté de fonctionner après un an. Est-ce encore couvert?", "articles": ["38", "38.1"]}
+{"id": "q015", "lang": "fr", "question": "Est-ce que je suis obligé de payer pour une garantie prolongée?", "articles": ["228.1", "228.2", "228.3"]}
+{"id": "q016", "lang": "fr", "question": "Est-ce que la garantie légale couvre les produits usagés?", "articles": ["37", "38"]}
+{"id": "q017", "lang": "fr", "question": "Le fabricant refuse de réparer mon produit. Est-ce que je peux me retourner contre le magasin?", "articles": ["53", "54"]}
+{"id": "q018", "lang": "fr", "question": "J'ai acheté un produit qui ne fait pas ce qu'il est supposé faire. Quels sont mes droits?", "articles": ["37", "40", "41"]}
+{"id": "q019", "lang": "fr", "question": "Est-ce qu'un commerçant peut refuser de réparer un produit parce que je n'ai plus la boîte?", "articles": ["37", "38", "54"]}
+{"id": "q020", "lang": "fr", "question": "J'ai acheté un produit et il est tombé en panne juste après la fin de la garantie. Est-ce que j'ai encore des recours?", "articles": ["38", "54"]}
+{"id": "q021", "lang": "fr", "question": "J'ai commandé quelque chose en ligne et je n'ai jamais reçu mon colis. Qu'est-ce que je peux faire?", "articles": ["54.9", "54.13", "54.14"]}
+{"id": "q022", "lang": "fr", "question": "Le magasin refuse de me rembourser une commande que je n'ai jamais reçue. Est-ce légal?", "articles": ["54.9", "54.13", "54.14"]}
+{"id": "q023", "lang": "fr", "question": "J'ai reçu le mauvais produit. Est-ce que le vendeur doit payer le retour?", "articles": ["40", "54.13"]}
+{"id": "q024", "lang": "fr", "question": "Est-ce que je peux annuler une commande après l'avoir passée sur Internet?", "articles": ["54.8", "54.9"]}
+{"id": "q025", "lang": "fr", "question": "Un site Web m'a chargé plus cher que le prix affiché. Est-ce légal?", "articles": ["224", "54.4"]}
+{"id": "q026", "lang": "fr", "question": "J'ai acheté sur un site qui ne répond plus à mes messages. Comment récupérer mon argent?", "articles": ["54.9", "54.13", "54.14"]}
+{"id": "q027", "lang": "fr", "question": "Un commerçant peut-il refuser un remboursement parce que j'ai acheté en ligne?", "articles": ["54.8", "54.9"]}
+{"id": "q028", "lang": "fr", "question": "Mon colis est arrivé endommagé. Qui est responsable?", "articles": []}
+{"id": "q029", "lang": "fr", "question": "Je veux annuler mon abonnement, mais le commerçant refuse. Est-ce qu'il a le droit?", "articles": ["214.6", "11.4", "193"]}
+{"id": "q030", "lang": "fr", "question": "Comment faire pour arrêter un abonnement qui continue de me facturer chaque mois?", "articles": ["214.6", "124", "187.28"]}
+{"id": "q031", "lang": "fr", "question": "Une entreprise peut-elle renouveler mon abonnement sans me demander?", "articles": ["214.3", "214.4", "187.29", "230"]}
+{"id": "q032", "lang": "fr", "question": "Je me suis inscrit à un gym et je veux annuler mon contrat. Comment faire?", "articles": ["193", "202", "203", "204"]}
+{"id": "q033", "lang": "fr", "question": "Mon fournisseur Internet a augmenté mon prix sans me prévenir. Est-ce légal?", "articles": ["11.2"]}
+{"id": "q034", "lang": "fr", "question": "Est-ce que je peux annuler mon contrat de cellulaire sans payer de pénalité?", "articles": ["214.6", "214.7", "214.8"]}
+{"id": "q035", "lang": "fr", "question": "J'ai signé un contrat et je regrette mon choix. Est-ce trop tard pour l'annuler?", "articles": ["59", "73", "54.8"]}
+{"id": "q036", "lang": "fr", "question": "Une entreprise continue de me charger même après que j'ai annulé mon abonnement. Que faire?", "articles": ["214.6", "124", "230"]}
+{"id": "q037", "lang": "fr", "question": "Le prix affiché en magasin est moins cher que celui à la caisse. Est-ce que le magasin doit me donner le prix affiché?", "articles": ["223", "224"]}
+{"id": "q038", "lang": "fr", "question": "Est-ce qu'un magasin peut ajouter des frais que je n'avais pas vus au moment de payer?", "articles": ["12", "224"]}
+{"id": "q039", "lang": "fr", "question": "J'ai payé plus cher que le prix annoncé dans une publicité. Est-ce que je peux réclamer?", "articles": ["224", "272.1"]}
+{"id": "q040", "lang": "fr", "question": "Un commerçant peut-il me facturer des frais supplémentaires sans m'en informer?", "articles": ["12", "224"]}
+{"id": "q041", "lang": "fr", "question": "Est-ce légal d'annoncer un prix très bas pour ensuite me dire que le produit n'est plus disponible?", "articles": ["231"]}
+{"id": "q042", "lang": "fr", "question": "Le vendeur m'a fait payer pour un service que je n'avais jamais demandé. Est-ce que je peux récupérer mon argent?", "articles": ["230", "272.1"]}
+{"id": "q043", "lang": "fr", "question": "Est-ce qu'un commerçant peut refuser de me vendre un produit au prix affiché?", "articles": ["223", "224"]}
+{"id": "q044", "lang": "fr", "question": "J'ai acheté une voiture usagée chez un concessionnaire et elle tombe déjà en panne. Quels sont mes droits?", "articles": ["159", "160", "37", "38"]}
+{"id": "q045", "lang": "fr", "question": "Un concessionnaire peut-il vendre une voiture sans aucune garantie?", "articles": ["159", "160", "37", "38"]}
+{"id": "q046", "lang": "fr", "question": "Le garage a fait des réparations sans mon autorisation et me demande de payer. Suis-je obligé?", "articles": ["168", "172", "178"]}
+{"id": "q047", "lang": "fr", "question": "Le mécanicien m'a chargé beaucoup plus cher que le prix annoncé. Est-ce légal?", "articles": ["171", "178", "179"]}
+{"id": "q048", "lang": "fr", "question": "Mon garagiste refuse de me remettre mon véhicule tant que je ne paie pas une facture que je conteste. Que puis-je faire?", "articles": ["179"]}
+{"id": "q049", "lang": "fr", "question": "Où est-ce que je peux porter plainte contre un magasin au Québec?", "articles": ["292"]}
+{"id": "q050", "lang": "fr", "question": "Un commerçant ne veut rien savoir et refuse de régler mon problème. Quelles sont mes options?", "articles": ["272", "292"]}
