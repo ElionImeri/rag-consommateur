@@ -4,7 +4,21 @@ import json
 from bs4 import BeautifulSoup
 
 ARTICLE_ID = re.compile(r"^se:[^-]+$")
+GROUP_ID = re.compile(r"^(g[a-z]:[^-]+)(-g[a-z]:[^-]+)*$")
 
+def get_section_path(div):
+    """Return the titles of the groups containing the article"""
+    titles = []
+    groups = div.find_parents("div", id=GROUP_ID)
+    for group in reversed(groups): #from farthest to closest
+        header = group.find(id=group["id"] + "-h1")
+        if header is None:
+            continue
+        title_el = header.find(id=re.compile("-t1"))
+        if title_el is None:
+            continue
+        titles.append(title_el.get_text(" ", strip=True).capitalize())
+    return " > ".join(titles)
 
 def clean_text(text):
     # Removes stray spaces left by get_text().
@@ -35,6 +49,7 @@ def parse_file(path, lang):
         number = div["id"].removeprefix("se:").replace("_", ".")
         articles.append(
             {
+                "section": get_section_path(div),
                 "id": f"{lang}-{number}",
                 "article": number,
                 "lang": lang,
@@ -59,6 +74,8 @@ if __name__ == "__main__":
             all_articles.extend(parse_file(f, lang))
 
         numbers[lang] = {a["article"] for a in all_articles}
+        no_section = [a["article"] for a in all_articles if not a["section"]]
+        print("Articles without section:", len(no_section), no_section[:10])
 
         print("Number of articles: ", len(all_articles))
         print("First: ", all_articles[0]["article"])

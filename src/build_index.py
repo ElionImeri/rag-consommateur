@@ -19,13 +19,13 @@ if __name__ == "__main__":
     model = SentenceTransformer(MODEL_NAME)
 
     # 2. Check the real length in tokens (the model's limit is 512)
-    token_counts = [len(model.tokenizer.tokenize(chunk["text"])) for chunk in chunks]
+    # 3. Encode every chunk, with "passage:" prefix
+    texts = [f"passage: {c['section']}\n{c['text']}" for c in chunks]
+    token_counts = [len(model.tokenizer.tokenize(t)) for t in texts]
     if max(token_counts) + 5 > 512:
        raise SystemExit("A chunk is too long for the model (512 tokens): lower LIMIT.")
     print(f"Longest chunk: {max(token_counts)} tokens")
-
-    # 3. Encode every chunk, with "passage:" prefix
-    texts = [f"passage: {chunk['text']}" for chunk in chunks]
+    
     embeddings = model.encode(
         texts, normalize_embeddings=True, batch_size=32, show_progress_bar=True
     )

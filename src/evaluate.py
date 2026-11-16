@@ -6,7 +6,7 @@ from search import search
 from stats_corpus import load_articles
 
 QUESTIONS_PATH = Path("data/eval/questions.jsonl")
-RESULTS_PATH = Path("data/eval/results_baseline.jsonl")
+RESULTS_PATH = Path("data/eval/results_section.jsonl")
 K = 5  # number of distinct article
 N_CHUNKS = 20
 

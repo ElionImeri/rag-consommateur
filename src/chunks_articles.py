@@ -4,7 +4,7 @@ from pathlib import Path
 
 from stats_corpus import load_articles
 
-LIMIT = 2000  # 2000 characters
+LIMIT = 1800  # 1800 characters
 
 ITEM_MARKERS = {
     "fr": re.compile(r"\s(?=(?:[a-z](?:\.\d+)*\)|\d+(?:\.\d+)*°))"),
@@ -53,6 +53,7 @@ def chunk_article(article):
 def make_chunk(article, part, text):
     # Build a chunk dict from an article, its part number and its text.
     return {
+        "section": article["section"],
         "id": f"{article['id']}#{part}",
         "article": article["article"],
         "lang": article["lang"],
