@@ -1,0 +1,22 @@
+QUESTION: Un commerçant peut-il refuser de réparer un appareil encore sous garantie au Québec ?
+
+ Non, un commerçant ne peut pas refuser de réparer un appareil encore sous garantie au Québec, selon les dispositions de la loi sur la protection du consommateur et des biens mobiliers [Loi C-22.1].
+
+En effet, selon l'article 39.5, si un commerçant est en défaut de rendre disponibles les pièces de rechange, les services de réparation ou les renseignements nécessaires à la réparation pendant la durée prévue à l'article 39, le consommateur peut demander à ce commerçant la réparation du bien qui la nécessite. Le commerçant doit alors informer le consommateur, dans un délai de 10 jours suivant la demande de ce dernier et par écrit, du délai dans lequel il propose d'effectuer la réparation.
+
+Si le commerçant refuse de réparer l'appareil, le consommateur peut faire effectuer la réparation par un tiers et le commerçant en assume les frais raisonnables, selon l'article 39.7.
+
+Il s'agit d'information juridique, pas d'un avis juridique.
+
+Sources : ['39.5', '39.7', '1', '39.3', '175']
+------------------------------------------------------------
+QUESTION: In Quebec, can I cancel a contract signed with a door-to-door salesperson?
+
+ Oui, vous pouvez annuler un contrat signé avec un vendeur ambulant (itinérant) au Québec. Selon l'article 58, le contrat doit être écrit et doit inclure divers éléments, dont le numéro de permis de l'itinérant, les informations de contact de chaque établissement de l'itinérant et de chaque représentant qui a signé le contrat, les détails du bien ou du service concerné, le prix, les frais d'impôt, le montant total à payer par le consommateur, les conditions de paiement, les dates de livraison des biens et des prestations de services, ainsi que le droit accordé au consommateur de annuler le contrat à son discrétion dans les dix jours suivant la signature du contrat.
+
+En outre, selon l'article 62, le contrat est annulé de droit dès le retour des biens ou l'envoi de la forme ou de la notification. Si le contrat fait avec un tiers-mercier résulte d'une offre, représentation ou autre action de l'itinérant, ce contrat fait partie du contrat entier et est annulé de droit si le contrat fait avec l'itinérant est annulé. De plus, le consommateur peut, en ce qui concerne un contrat fait avec un tiers-mercier et mentionné dans le deuxième paragraphe, exercer directement contre l'itinérant un recours basé sur la non-exécution du contrat ou sur les dispositions de la Loi sur les contrats de biens et de services.
+
+Il est donc possible pour vous d'annuler un contrat signé avec un vendeur ambulant au Québec, en respectant les conditions prévues par les articles 58 et 62 de la Loi sur les contrats de biens et de services.
+
+Sources : ['58', '214.6', '62', '103.1', '329']
+------------------------------------------------------------
