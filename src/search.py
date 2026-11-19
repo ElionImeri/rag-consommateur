@@ -9,6 +9,7 @@ MODEL_NAME = "intfloat/multilingual-e5-base"
 INDEX_DIR = Path("data/index")
 RERANKER_NAME = "cross-encoder/mmarco-mMiniLMv2-L12-H384-v1"
 reranker = CrossEncoder(RERANKER_NAME, max_length=512)
+RRF_K = 60
 
 # Loaded once, when the module is imported
 model = SentenceTransformer(MODEL_NAME)
@@ -24,18 +25,48 @@ def search(question, k=5):
     return [(chunks[i], float(scores[i])) for i in top]
 
 
+def rerank_scores(question, candidates):
+    """Return the cross-encoder score for each candidate, in the same order."""
+    pairs = [(question, f"{c['section']}\n{c['text']}") for c, _ in candidates]
+    return reranker.predict(pairs)
+
+
 def search_rerank(question, k=5, n_candidates=60):
     """Retrieve n_candidates chunks with embeddings, the rerank them
     with cross-encoder and return the k best, with their new scores."""
     candidates = search(question, k=n_candidates)
-    pairs = [(question, f"{c['section']}\n{c['text']}") for c, _ in candidates]
-    scores = reranker.predict(pairs)
+    scores = rerank_scores(question, candidates)
     ranked = sorted(
         zip([c for c, _ in candidates], scores),
         key=lambda x: x[1],
         reverse=True,
     )
     return ranked[:k]
+
+
+def search_rrf(question, k=5, n_candidates=60):
+    """Fuse the embedding ranking and the cross-encoder ranking (RRF)."""
+    candidates = search(question, k=n_candidates)
+    ce_scores = rerank_scores(question, candidates)
+
+    fused = {}  # chunk id -> fused score
+
+    # 1. Contribution to the embedding ranking: candidates are already in order
+    for rank, (chunk, _) in enumerate(candidates, start=1):
+        cid = chunk["id"]
+        fused[cid] = fused.get(cid, 0) + (1 / (RRF_K + rank))
+
+    # 2. contribution of the cross-encoder ranking
+    ce_order = sorted(range(len(candidates)), key=lambda i: ce_scores[i], reverse=True)
+    for rank, i in enumerate(ce_order, start=1):
+        chunk = candidates[i][0]
+        cid = chunk["id"]
+        fused[cid] = fused.get(cid, 0) + (1 / (RRF_K + rank))
+
+    # 3. Sort the chunks by fused score
+    by_id = {c["id"]: c for c, _ in candidates}
+    ranked = sorted(fused.items(), key=lambda x: x[1], reverse=True)
+    return [(by_id[cid], score) for cid, score in ranked[:k]]
 
 
 if __name__ == "__main__":
