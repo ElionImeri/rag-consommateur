@@ -2,11 +2,11 @@ import json
 import time
 from pathlib import Path
 
-from search import search
+from search import search_rerank
 from stats_corpus import load_articles
 
 QUESTIONS_PATH = Path("data/eval/questions.jsonl")
-RESULTS_PATH = Path("data/eval/results_section.jsonl")
+RESULTS_PATH = Path("data/eval/results_rerank.jsonl")
 K = 5  # number of distinct article
 N_CHUNKS = 20
 
@@ -14,7 +14,7 @@ N_CHUNKS = 20
 def top_articles(question, k=K):
     """Return the first distinct article numbers, in ranking order."""
     articles = []
-    for chunk, score in search(question, k=N_CHUNKS):
+    for chunk, score in search_rerank(question, k=N_CHUNKS):
         if chunk["article"] not in articles:
             articles.append(chunk["article"])
         if len(articles) == k:
