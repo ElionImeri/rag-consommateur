@@ -1,6 +1,7 @@
 import requests
+import os
 
-OLLAMA_URL = "http://localhost:11434/api/chat"
+OLLAMA_URL = os.getenv("OLLAMA_URL", "http://localhost:11434/api/chat")
 MODEL = "mistral:latest"
 
 def chat(messages, temperature=0.1, num_ctx=8192):

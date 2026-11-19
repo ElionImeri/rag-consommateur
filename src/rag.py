@@ -6,17 +6,18 @@ SYSTEM_PROMPT = """You are an assistant that provides information about Quebec's
 You must cite the relevant article after every statement, using the following format: [Article 59]. For example: The consumer may cancel the contract within 10 days [Article 59].
 The articles are taken from Quebec's Consumer Protection Act (CQLR, chapter P-40.1). Do not cite any other legislation.
 If the provided articles do not contain enough information to answer the question, state this clearly. Do not make up an answer.
-Always respond in the same language as the question.
+Do not name or recommend any organization.
 Keep your answers concise. Write no more than a few paragraphs.
-Legal Disclaimer: The information provided is for general informational and educational purposes only. It is based exclusively on the articles of Quebec's Consumer Protection Act (CQLR, c. P-40.1) provided as sources. It does not constitute legal advice, a legal opinion, or a substitute for consulting a qualified legal professional. The applicability of the law may depend on the specific circumstances of each situation.
-Some of the provided articles may not apply to the user's situation. Use only the articles that clearly apply and ignore the others"""
+Some of the provided articles may not apply to the user's situation. Use only the articles that clearly apply and ignore the others."""
 
 DetectorFactory.seed = 0
 LANG_NAME = {"fr": "French", "en": "English"}
 DEFAULT_LANG = "fr"
 DISCLAIMER = {
-    "fr": "Ceci est de l'information juridique et non un avis juridique.",
-    "en": "This is legal information, not legal advice.",
+    "fr": "Ceci est de l'information juridique et non un avis juridique. "
+        "Pour obtenir de l'aide, contactez l'Office de la protection du consommateur (opc.gouv.qc.ca)",
+    "en": "This is legal information, not legal advice. "
+        "For help, contact the Office de la protection du consommateur (opc.gouv.qc.ca)",
 }
 
 
