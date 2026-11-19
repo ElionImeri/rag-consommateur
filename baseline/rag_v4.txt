@@ -1,0 +1,20 @@
+QUESTION: Un commerçant peut-il refuser de réparer un appareil encore sous garantie au Québec ?
+
+Non, un commerçant ne peut pas refuser de réparer un appareil encore sous garantie au Québec [Article 39.5]. Si le commerçant est en défaut de rendre disponibles les pièces de rechange, les services de réparation ou les renseignements nécessaires à la réparation pendant la durée prévue à l'article 39, le consommateur peut demander à ce commerçant la réparation du bien qui la nécessite [Article 39.5]. Le commerçant doit informer le consommateur, dans un délai de 10 jours suivant la demande de ce dernier et par écrit, du délai dans lequel il propose d'effectuer la réparation [Article 39.5].
+
+Si le commerçant refuse de fournir une évaluation écrite avant de faire la réparation, il ne peut pas se libérer de cette obligation sans une renonciation écrite en entier par le consommateur et signée par ce dernier [Article 183].
+
+Il est également interdit au commerçant ou au fabricant de refuser d'exécuter la garantie qu'il accorde sous prétexte que le document qui la constate ne lui est pas parvenu ou n'a pas été validé [Article 226].
+
+Ceci est de l'information juridique et non un avis juridique.
+
+Sources : ['39.7', '327.2', '183', '39.5', '226']
+------------------------------------------------------------
+QUESTION: In Quebec, can I cancel a contract signed with a door-to-door salesperson?
+
+Yes, in Quebec, you can cancel a contract signed with a door-to-door salesperson. According to [Article 59], the contract made between an itinerant merchant (door-to-door salesperson) and a consumer may be cancelled at the discretion of the consumer within ten days following the date both parties have a duplicate of the contract. However, if certain conditions are met, such as non-compliance with the rules set out in sections 25 to 28 for the making of contracts, or failure to attach the required cancellation form, the cancellation period can be extended up to one year. [Article 59] [Article 58]
+
+This is legal information, not legal advice.
+
+Sources : ['58', '62', '59', '214.6', '54.9']
+------------------------------------------------------------

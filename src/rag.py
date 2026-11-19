@@ -1,5 +1,5 @@
 from llm import chat
-from search import search
+from search import search_rrf
 from langdetect import DetectorFactory, LangDetectException, detect
 
 SYSTEM_PROMPT = """You are an assistant that provides information about Quebec's Consumer Protection Act. Your task is to answer exclusively based on the provided articles (never on general knowledge).
@@ -35,7 +35,7 @@ def retrieve(question, k=5, n_chunks=20):
     """Return the first chunk of the k most relevant distinct articles."""
     chunks = []
     seen = set()
-    for chunk, score in search(question, k=n_chunks):
+    for chunk, score in search_rrf(question, k=n_chunks):
         if chunk["article"] not in seen:
             seen.add(chunk["article"])
             chunks.append(chunk)
